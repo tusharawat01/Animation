@@ -1,0 +1,42 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #E13323;
+    border: 4px solid #E13323;
+    padding: 40px 80px;
+    font-size: 45px;
+    font-family: sans-serif;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #E13323;
+    z-index: -1;
+    transform: translateY(-100%);
+    border-radius: 0 0 50% 50%;
+    transition: all 1s;
+
+}
+
+a:hover::before {
+    transform: translateY(0);
+    height: 190%
+}
+
+a:hover {
+    color: white;
+}
