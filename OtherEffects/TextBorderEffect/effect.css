@@ -1,0 +1,122 @@
+
+
+body{
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.box{
+    position: relative;
+    height: 200px;
+    width:200px;
+    box-sizing: border-box;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotated{
+    position: relative;
+    height:100%;
+    width: 100%;
+}
+
+h1{
+    margin:0;
+    padding:0;
+    text-transform: uppercase;
+    font-size: 24px ;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color:#272727;
+    text-align: center;
+
+}
+
+span{
+    font-size: 30px;
+    color:#10ac84;
+    font-weight: bold;
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    border-top: 4px solid #10ac84;
+    border-bottom:4px solid #10ac84;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transform: scaleX(0);
+}
+.box::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    border-left: 4px solid #10ac84;
+    border-right:4px solid #10ac84;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transform: scaleY(0);
+    transition-delay: 0s;
+}
+
+.box:hover::before{
+    transform: scale(1);
+}
+.box:hover::after{
+    transform: scaleY(1);
+    transition-delay: 0.5s;
+}
+
+.rotated::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    border-left: 4px solid #10ac84;
+    border-right:4px solid #10ac84;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transform: rotate(45deg) scaleY(0)  
+}
+
+.rotated::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    border-top: 4px solid #10ac84;
+    border-bottom:4px solid #10ac84;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transform: rotate(45deg) scaleX(0)  
+}
+
+.box:hover  .rotated::before{
+    transform: rotate(45deg) scaleY(1);
+    transition-delay: 1.5s; 
+}
+.box:hover .rotated::after{
+    transform: rotate(45deg) scaleX(1);
+    transition-delay: 1s;
+}
+
+
+
