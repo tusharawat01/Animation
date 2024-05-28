@@ -1,0 +1,81 @@
+body{
+    margin:0;
+}
+
+div{
+    width:150px;
+    height:150px;
+    background-color: rebeccapurple;
+    /* animation-name : moving;
+    animation-duration: 3s; */
+    /* animation-delay: 5s; */
+
+    /* 1. when the animation ends it return to its initial position by none and its by default
+    animation-fill-mode: none; */
+
+    /* 2. animation stays its final position when animation-fill-mode is forwards
+    animation-fill-mode: forwards; */
+
+    /* 3. By default animation-fill-mode is none so the element is in starting position as defined 
+    but when we give initial value in keyframes like 0%{transform: translateX(500px)}; but by the default behaviour
+    the element eill not start from initial point so we use animation-fill-mode: backwards
+    animation-fill-mode: backwards; */
+
+    /* 4. this is mixer of both forwards and backwards in thhis we can define initial stage and decide where to saty the element
+    animation-fill-mode: both; */ 
+
+    /* defines how many time animation occured */
+    /* animation-iteration-count: 5; */
+
+    /* if we want to iterate the animation foreever */
+    /* animation-iteration-count: infinite; */
+
+    /* animation-timing-function is similar to transition-timing-function ease, ease-in, ease-out ease-in-out; */
+    /* ease- starts slow thend fast and ends slow;
+    ease-in- starts slow and then faster
+    ease-out- starts faster and ends slow
+    ease-in-out - similar to ease
+    linear- constant rate */
+
+    /* in this the animation starts from 0% andd ends to 100% and it is default direction
+    animation-direction: normal; */
+
+    /* in this the animation starts from 100% andd ends to 0% 
+    animation-direction: reverse; */
+
+    /* in this the animation starts from 0% andd ends to 100% and then starts from 100% and end to 0%
+    then starts from 0% and ends to 100% then same alternate goes on */
+    /* animation-direction: alternate; */
+
+    /* same as alternate but in this first iteration in reverse direction; */
+    /* animation-direction: alternate-reverse; */
+
+
+    /* animation shorthand */
+    /* order of property does not matter in animation but animation-delay is always after animation-duration */
+    /* animation: animation-name animation-duration animation-fill-mode animation-iteration-count animation-delay ......; */
+
+    animation: moving 3s infinite alternate ease 1s ;
+
+}
+
+/* @keyframes moving{
+    from{ transform: translateX(0);}
+
+    to { transform: translateX(1000px);}
+} */
+
+/* for more stages */
+
+@keyframes moving{
+    0% { transform: translateX(0);}
+
+    25% { transform: translateX(500px);}
+
+    50% { transform: translate(500px, 500px);}
+
+    75% { transform : translateY(500px)}
+
+    100% { transform: translateX(0);}
+}
+
