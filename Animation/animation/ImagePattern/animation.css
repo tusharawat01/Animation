@@ -1,0 +1,19 @@
+.banner{
+    height:100vh;
+    background: url(bg.png);
+    background-position: 0 0;
+    animation: animated-pattern 15s linear infinite;
+}
+
+@keyframes animated-pattern {
+    from { background-position: 0 0 }
+    
+    /* for moving vertically 600px is height of image used in bg  */
+    /* to { background-position: 0 600px} */
+
+    /* for moving horizontally 800px is the width of image used for bg */
+    /* to { background-position: 800px 0} */
+
+    /* for moving horizontally and vertically at same time */
+    to {background-position: 800px 600px}
+}
