@@ -1,0 +1,46 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: #111;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    border: 3px solid #fff;
+    font-size: 30px;
+    padding: 30px 60px;
+    position:relative;
+    overflow: hidden;
+    transition: 0.5s;
+    
+}
+
+a::before{
+    content: "";
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100px;
+    width:60px;
+    background-color: #f66334;
+    transform: skew(-15deg);
+    z-index: -1;
+    animation: moving 1.2s linear infinite ;
+    transition: 0.5s;
+}
+
+a:hover::before{
+    width: 100%;
+    transform: skew(0deg);
+    animation: none;
+
+}
+
+@keyframes moving {
+    from { left: -120px;}
+    to { left : 100%}
+}
