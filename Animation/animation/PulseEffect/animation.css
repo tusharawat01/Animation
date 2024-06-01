@@ -1,0 +1,52 @@
+body{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+.pulse{
+    margin: 0;
+    padding: 0;
+    position:relative;
+    width: 100px;
+    height: 100px;
+    background-color: #58ea00;
+    color:white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 48px;
+    line-height: 100px;
+    
+}
+
+.pulse::before{
+    content: "";
+    position: absolute;
+    top:-20px;
+    left:-20px;
+    right:-20px;
+    bottom:-20px;
+    border: 1px solid #58ea00;
+    border-radius: 50%;
+    animation: pulsing 1.5s linear infinite;
+}
+.pulse::after{
+    content: "";
+    position: absolute;
+    top:-20px;
+    left:-20px;
+    right:-20px;
+    bottom:-20px;
+    border: 1px solid #58ea00;
+    border-radius: 50%;
+    animation: pulsing 1.5s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes pulsing {
+    0% { transform: scale(0.5); opacity:0;}
+    50% {transform: scale(1); opacity: 1;}
+    100% {transform: scale(1.2); opacity: 0;}
+}

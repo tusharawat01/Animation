@@ -1,0 +1,22 @@
+body{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    animation: bg-change 5s linear infinite;
+}
+
+h1{
+    text-align: center;
+    font-size: 80px;
+    color: white;
+}
+
+@keyframes bg-change {
+    0% {background-color: #272727;}
+    20% {background-color: blue;}
+    40% {background-color: pink;}
+    60% {background-color: green;}
+    80% {background-color: orange;}
+    100% {background-color: #272727;}
+}

@@ -1,0 +1,26 @@
+body{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272727;
+}
+
+.slider{
+    width: 800px;
+    height: 400px;
+    background: url(car.png);
+    background-repeat: no-repeat;
+    animation: slider 10s linear infinite;
+}
+
+@keyframes slider {
+    0% { background: url(car.png); background-repeat: no-repeat;}
+    20% { background: url(car.png); background-repeat: no-repeat;}
+    25% { background: url(bg.png); background-repeat: no-repeat;}
+    45% { background: url(bg.png); background-repeat: no-repeat;}
+    50% { background: url(motobike.png); background-repeat: no-repeat;}
+    70% { background: url(motobike.png); background-repeat: no-repeat;}
+    75% { background: url(rain.png); background-repeat: no-repeat;}
+    100% { background: url(rain.png); background-repeat: no-repeat;}
+}
