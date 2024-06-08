@@ -1,0 +1,34 @@
+body{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272727;
+    font-family: sans-serif;
+}
+
+h2{
+    position: relative;
+    font-size: 3em;
+    letter-spacing: 1px;
+    color:white;
+    overflow: hidden;;
+}
+
+h2::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:-20%;
+    height:100%;
+    width:120%;
+    background-color: #272727;
+    animation : fadding 10s linear infinite;
+}
+
+@keyframes fadding {
+    0% {left:-20%}
+    50% {left:120%}
+    100% {left:-20%}
+}
+
