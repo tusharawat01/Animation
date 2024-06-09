@@ -1,0 +1,28 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: #2f2f2f;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    height:300px;
+    width:300px;
+    /* clip-path: polygon(50% 0, 0 100%, 100% 100%); */
+    /* clip-path: polygon(x y, x y, x y); x is how far thww point is from left and y is how far from top */
+
+    /* reverse traiangle */
+    /* clip-path: polygon(0 0, 100% 0, 50% 100%); */
+
+    /* it  is difficult to make differnt complex shapes by coding ourselves so there is a website named clippy for predifined code  */
+
+    /* clip-path: circle(50% at 50% 50%); */
+
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); */
+
+
+}
+
