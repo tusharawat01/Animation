@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #575757;
+}
+
+.wave{
+    position: relative;
+    height:500px;
+    width: 500px;
+}
+
+h2{
+    position: absolute;
+    text-align: center;
+    line-height: 500px;
+    font-size: 170px;
+    font-family: sans-serif;
+}
+
+h2:nth-child(1){
+    color: #7efff5;
+}
+h2:nth-child(2){
+    color: #03a9f4;
+    animation : animate 2s ease-in-out infinite;
+}
+
+
+@keyframes animate {
+    0% {clip-path: polygon(0 35%, 21% 37%, 43% 47%, 60% 53%, 79% 45%, 99% 40%, 100% 100%, 0 100%);}
+    50% {clip-path: polygon(0 45%, 19% 46%, 36% 56%, 51% 44%, 76% 33%, 100% 34%, 100% 100%, 0 100%);}
+    100% {clip-path: polygon(0 35%, 21% 37%, 43% 47%, 60% 53%, 79% 45%, 99% 40%, 100% 100%, 0 100%);}
+}
