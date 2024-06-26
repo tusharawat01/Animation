@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    font-family: sans-serif;
+}
+
+.menu{
+    display: flex;
+    gap: 6px;
+}
+
+.menu .data{
+    position: relative;
+    background-color: #fff;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 10px;
+    gap: 10px;
+}
+
+.menu .data .imgbx{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border:2px solid black
+}
+.imgbx img{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+}
+
+.menu .data .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.data .content h3{
+    font-weight: 600;
+    line-height: 1.1em;
+}
+
+.data .content p{
+    font-weight: 500;
+    font-size: 0.8em;
+    color: rgba(0,0,0,0.6);
+}
+
+.navigation{
+    position: relative;
+    width:40px;
+    height:70px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.navigation span{
+    position: absolute;
+    width:6px;
+    height:6px;
+    border-radius: 50%;
+    background-color: black;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 5px;
+}
+
+.navigation span:nth-child(1){
+    transform: translateY(-14px);
+}
+.navigation span:nth-child(3){
+    transform: translateY(14px);
+}
+
+.navigation.active{
+    width:200px
+}
+
+.navigation.active span{
+    width: 50px;
+    height:50px;
+    transition: 0.5s;
+}
+
+.navigation.active span:nth-child(1){
+    transform: translateX(-60px);
+}
+.navigation.active span:nth-child(3){
+    transform: translateX(60px);
+}
+
+.navigation span a{
+    color: black;
+    font-size: 0em;
+}
+
+.navigation.active span a{
+    color: white;
+    font-size: 1.2em;
+}
+
+.navigation.active span:hover{
+    background-color: rgb(74, 74, 223);
+}
+
+
